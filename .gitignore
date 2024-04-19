@@ -1,4 +1,7 @@
 .idea
 .venv
+dist/*
+dist
+NCapybaraLib.egg-info
 
 secret.txt

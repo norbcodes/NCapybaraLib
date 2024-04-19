@@ -3,5 +3,5 @@
 <p>Check out the library on <a href="https://pypi.org/project/NCapybaraLib/">PyPi</a>!</p>
 
 <h1>Download</h1>
-<p>To download this library, run this command:</p>
-<blockquote>pip install NCapybaraLib</blockquote>
+<p>To download this library, run this command:
+<pre><code>pip install NCapybaraLib</code></pre></p>

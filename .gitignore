@@ -3,5 +3,8 @@
 dist/*
 dist
 NCapybaraLib.egg-info
+__pycache__/*
+src/NCapybaraLib/__pycache__/*
 
 secret.txt
+main.py

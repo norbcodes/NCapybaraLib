@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "NCapybaraLib"
 description = "A small library with a bunch of functions and thingies I made for fun."
 authors = [{name="NorbCodes"}]
-version = "0.0.3"
+version = "0.0.4"
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [

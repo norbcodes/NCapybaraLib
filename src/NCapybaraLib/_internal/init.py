@@ -1,5 +1,5 @@
 """
-NCapybaraLib
+NCapybaraLib; By NorbCodes.
 
 A small library with a bunch of functions and thingies I made for fun.
 
@@ -21,7 +21,7 @@ def inject_function(obj: Any, func_name: str, func: Callable[[Any], Any]) -> Any
     :param obj: The object instance name referring to the object to inject into.
     :param func_name: The method name.
     :param func: The function to inject.
-    :return:
+    :return: The *obj* that was passed in, now with the function injected in it.
     """
     scope = {"target": obj, "injection": func}
     try:

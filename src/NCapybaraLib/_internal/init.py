@@ -6,6 +6,8 @@ A small library with a bunch of functions and thingies I made for fun.
 https://pypi.org/project/NCapybaraLib/
 """
 
+import os
+import sys
 from typing import Any, Callable
 
 def print_hello_world() -> None:
@@ -29,3 +31,12 @@ def inject_function(obj: Any, func_name: str, func: Callable[[Any], Any]) -> Any
     except AttributeError as A:
         raise AttributeError(f"Cannot inject function {func.__name__} as {func_name} into object of type {type(obj)}.") from A
     return scope["target"]
+
+def clear_console() -> None:
+    """
+    Simple shrimple function to clear the console.
+    """
+    if sys.platform.casefold() == "win32":
+        os.system("cls")
+    else:
+        os.system("clear")

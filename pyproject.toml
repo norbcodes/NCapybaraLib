@@ -6,16 +6,20 @@ build-backend = "setuptools.build_meta"
 name = "NCapybaraLib"
 description = "A small library with a bunch of functions and thingies I made for fun."
 authors = [{name="NorbCodes"}]
-version = "0.0.5"
+version = "0.0.6"
 readme = "README.md"
 requires-python = ">=3.12"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
     "Natural Language :: English",
     "Operating System :: Microsoft :: Windows :: Windows 10",
-    "Programming Language :: Python :: 3.12"
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
 ]
 
 [project.urls]
 "Github Repo" = "https://github.com/norbcodes/NCapybaraLib"
 "Bug Tracker" = "https://github.com/norbcodes/NCapybaraLib/issues"
+"Pull Requests" = "https://github.com/norbcodes/NCapybaraLib/pulls"

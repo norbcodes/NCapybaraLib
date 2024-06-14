@@ -16,7 +16,11 @@
 <h1>Download</h1>
 <p>
 To download this library, run this command:<pre><code>pip install NCapybaraLib</code></pre>
-This library does not need any dependencies.
+This library <i>does not need any dependencies</i>.<br>
+You can alternatively get the latest release <a href="https://github.com/norbcodes/NCapybaraLib/releases/latest">here</a>.<br>
+Or you can clone the <a href="https://github.com/norbcodes/NCapybaraLib/tree/main">main</a> branch and build the library yourself, however the main branch is where development goes on,
+so it may not work well.<br>
+You can get the source code from the latest tag and built that, though.
 <a id="supported"></a>
 <h2>Supported versions</h2>
 <table><tr><th>Python 3.12</th><th>Python 3.11</th></tr></table>
@@ -24,9 +28,9 @@ This library does not need any dependencies.
 <a id="usage"></a>
 <h1>Usage</h1>
 <p>
-NCapybaraLib is split into multiple files.<br>To import the 'String' submodule for example, do this:<pre><code>import NCapybaraLib.String</code></pre>
+NCapybaraLib is split into multiple <b>files</b>.<br>To import the 'String' submodule for example, do this:<pre><code>import NCapybaraLib.String</code></pre>
 Or, you can import <b>everything</b> using this handy tool:<pre><code>import NCapybaraLib.All as NCapybaraLib</code></pre>
-As the code above suggests, this imports every class and object from the library.<br>
+As the code above suggests, this imports <i>every class and object from the library</i>.<br>
 I personally suggest you also name it just NCapybaraLib, so it looks a bit better.<br><br>
 What you <b>shouldn't do</b> though, is:<pre><code>from NCapybaraLib.All import *</code></pre>
 This will pollute your global scope with all of the NCapybaraLib functions/classes :)

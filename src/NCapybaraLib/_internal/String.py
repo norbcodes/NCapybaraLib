@@ -17,7 +17,7 @@ def insert(string: str, substring: str, index: int) -> str:
     :return: The final string.
     """
     left_half = string[0:index:1]
-    right_half = string[index::1]
+    right_half = string[index:None:1]
     return substring.join( (left_half, right_half) )
 
 def _string_similarity_algo(string: str, match: str, case_sensitivity: bool, round_output: int) -> float:

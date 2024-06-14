@@ -14,3 +14,5 @@ from .String import *
 from .Dictionary import *
 
 from .Math import *
+
+from .DoomWAD import *

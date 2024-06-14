@@ -1,7 +1,9 @@
 <table>
 <tr>
 <th><a href="#ncapy">NCapybaraLib</a></th>
+<th><a href="https://pypi.org/project/NCapybaraLib/">On Pypi</a></th>
 <th><a href="#download">Download</a></th>
+<th><a href="#supported">Supported versions</a></th>
 <th><a href="#usage">Usage</a></th>
 <th><a href="#where">Where is this library used?</a></th>
 </tr>
@@ -13,9 +15,11 @@
 <a id="download"></a>
 <h1>Download</h1>
 <p>
-To download this library, run this command:
-<pre><code>pip install NCapybaraLib</code></pre>
+To download this library, run this command:<pre><code>pip install NCapybaraLib</code></pre>
 This library does not need any dependencies.
+<a id="supported"></a>
+<h2>Supported versions</h2>
+<table><tr><th>Python 3.12</th><th>Python 3.11</th></tr></table>
 </p>
 <a id="usage"></a>
 <h1>Usage</h1>

@@ -37,4 +37,5 @@ def tetration(base: int, exponent: int) -> int:
     :param exponent: The exponent.
     :return: The result.
     """
-    return base**(base**exponent)
+    return base**(base**exponent)  # type: ignore[no-any-return]
+    # Yeah what the fuck mypy

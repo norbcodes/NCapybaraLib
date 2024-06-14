@@ -1,5 +1,6 @@
 .idea
 .venv
+.venv2
 dist/*
 dist
 NCapybaraLib.egg-info

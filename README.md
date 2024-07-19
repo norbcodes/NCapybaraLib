@@ -10,13 +10,20 @@
 </table>
 <a id="ncapy"></a>
 <h1>NCapybaraLib</h1>
+<p>
+<img alt="License" src="https://img.shields.io/github/license/norbcodes/NCapybaraLib?label=License&color=red"></img>
+<img alt="Downloads on Github" src="https://img.shields.io/github/downloads/norbcodes/NCapybaraLib/total?label=Downloads&color=darkblue"></img>
+<img alt="Downloads on PyPi" src="https://img.shields.io/pypi/dm/NCapybaraLib?label=PyPi%20Downloads&color=orange"></img>
+<img alt="Stars" src="https://img.shields.io/github/stars/norbcodes/NCapybaraLib?label=Stars&color=gold"></img>
+<img alt="LatestRelease" src="https://img.shields.io/github/v/release/norbcodes/NCapybaraLib?label=Latest%20Release"></img>
+</p>
 <p>A small library with a bunch of functions and thingies I made for fun.<br>So far, there's nothing much, but it will grow as time goes.</p>
 <p>Check out the library on <a href="https://pypi.org/project/NCapybaraLib/">PyPi</a>!</p>
 <a id="download"></a>
 <h1>Download</h1>
 <p>
 To download this library, run this command:<pre><code>pip install NCapybaraLib</code></pre>
-This library <i>does not need any dependencies</i>.<br>
+This library <b>does not need any dependencies</b>.<br>
 You can alternatively get the latest release <a href="https://github.com/norbcodes/NCapybaraLib/releases/latest">here</a>.<br>
 Or you can clone the <a href="https://github.com/norbcodes/NCapybaraLib/tree/main">main</a> branch and build the library yourself, however the main branch is where development goes on,
 so it may not work well.<br>

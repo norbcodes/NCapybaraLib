@@ -40,7 +40,7 @@ def tetration(base: int, exponent: int) -> int:
     return base**(base**exponent)  # type: ignore[no-any-return]
     # Yeah what the fuck mypy
 
-def clamp(value: int, minimum: int, maximum: int):
+def clamp(value: int | float, minimum: int, maximum: int) -> int | float:
     """
     clamp
 

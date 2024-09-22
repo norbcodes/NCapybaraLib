@@ -40,3 +40,23 @@ def clear_console() -> None:
         os.system("cls")
     else:
         os.system("clear")
+
+def nullish_operator(value: Any, new_value: Any) -> Any:
+    """
+    nullish_operator
+    
+    Recreation of the GameMaker Studio 2's nullish operator (??) and self nullish operator (=??).
+
+    For more information on how the operator is used in GMS2 visit: https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Overview/Expressions_And_Operators.htm?rhhlterm=nullish#
+
+    :param value: The value to return if itself is not None
+    :param new_value: The value to return if value is None
+
+    Example usage of the recreation in Python:
+    ```
+    username = nullish_operator(data.username, "INVALID USERNAME")
+    ```
+    """
+    
+    # yet another contribution from y'allsss buddy MF366
+    return new_value if value is None else value

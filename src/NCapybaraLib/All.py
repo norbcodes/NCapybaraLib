@@ -9,6 +9,7 @@ https://pypi.org/project/NCapybaraLib/
 from ._internal.init import print_hello_world
 from ._internal.init import inject_function
 from ._internal.init import clear_console
+from ._internal.init import nullish_operator
 
 from .String import *
 

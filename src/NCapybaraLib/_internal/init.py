@@ -60,4 +60,3 @@ def nullish_operator(value: Any, new_value: Any) -> Any:
     
     # yet another contribution from y'allsss buddy MF366
     return new_value if value is None else value
-    

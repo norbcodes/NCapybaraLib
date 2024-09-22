@@ -51,7 +51,7 @@ def clamp(value: int | float, minimum: int, maximum: int) -> int | float:
     and yeah that's literally all
     """
     
-    # mf366 here saying "fuck abreviating shit"
+    # mf366 here saying "fuck abbreviating shit"
     # "I shall use the correct nerdy terms :nerd:"
     
     if value < minimum:
@@ -60,5 +60,4 @@ def clamp(value: int | float, minimum: int, maximum: int) -> int | float:
     if value > maximum:
         return maximum
 
-    return value
-    
+    return value  # Simply genius code. <3

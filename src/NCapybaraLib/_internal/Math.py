@@ -39,3 +39,26 @@ def tetration(base: int, exponent: int) -> int:
     """
     return base**(base**exponent)  # type: ignore[no-any-return]
     # Yeah what the fuck mypy
+
+def clamp(value: int | float, minimum: int, maximum: int) -> int | float:
+    """
+    clamp
+
+    :param value: The value to clamp, duh?!
+    :param minimum: If value is below this number, return the later
+    :param maximum: If value is above this number, return the later
+
+    and yeah that's literally all
+    """
+    
+    # mf366 here saying "fuck abreviating shit"
+    # "I shall use the correct nerdy terms :nerd:"
+    
+    if value < minimum:
+        return minimum
+
+    if value > maximum:
+        return maximum
+
+    return value
+    

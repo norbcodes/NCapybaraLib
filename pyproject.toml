@@ -6,11 +6,12 @@ build-backend = "setuptools.build_meta"
 name = "NCapybaraLib"
 description = "A small library with a bunch of functions and thingies I made for fun."
 authors = [{name="NorbCodes"}]
-version = "1.1.0"
+version = "1.2.0"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Natural Language :: English",
     "Operating System :: Microsoft :: Windows :: Windows 10",

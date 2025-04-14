@@ -69,3 +69,42 @@ def string_similarity(string: str,
         for m in match:
             points.append(_string_similarity_algo(string, m, case_sensitivity, round_output))
         return points
+
+def is_palindrome(string: str,
+                  also_spaces: bool = False,
+                  case_sensitive: bool = False,
+                  ignore_non_letters: bool = True) -> bool:
+    """
+    Checks if a string is a palindrome.
+
+    :param string: The string to check.
+    :param also_spaces: Specify whether to check with spaces or not. "a toyota" would return `False` if this option is
+                        `True`, however it will return `True` if this option is `False`. This option removes whitespace, tabs and other invisible characters.
+    :param case_sensitive: Specify whether the function is case-sensitive.
+    :param ignore_non_letters: Specify whether to ignore non-letter characters, such as punctuation.
+                               "do geese see god?" would return `False` with this option set to `True`.
+                               This option does not exclude numbers.
+    :return:
+    """
+    # Yeaaaah!!!
+    # Case sensitive?
+    if not case_sensitive:
+        string = string.casefold()
+    # Also spaces?
+    if not also_spaces:
+        _temp_string = ""
+        for char in string:
+            if not char.isspace():
+                _temp_string += char
+        string = _temp_string
+        del _temp_string
+    # Ignore non letter chars?
+    if ignore_non_letters:
+        _temp_string = ""
+        for char in string:
+            if char.isalnum():
+                _temp_string += char
+        string = _temp_string
+        del _temp_string
+    # Finally, check
+    return string == string[::-1]

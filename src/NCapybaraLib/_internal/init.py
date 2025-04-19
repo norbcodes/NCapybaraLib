@@ -36,10 +36,7 @@ def clear_console() -> None:
     """
     Simple shrimple function to clear the console.
     """
-    if sys.platform.casefold() == "win32":
-        os.system("cls")
-    else:
-        os.system("clear")
+    print("\x1b[2J\x1b[1;1H")
 
 def nullish_operator(value: Any, new_value: Any) -> Any:
     """

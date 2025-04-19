@@ -61,3 +61,23 @@ def clamp(value: int | float, minimum: int, maximum: int) -> int | float:
         return maximum
 
     return value  # Simply genius code. <3
+
+def range_scale(val: int | float,
+                min: int | float,
+                max: int | float,
+                new_min: int | float,
+                new_max: int | float) -> int | float:
+    """
+    Takes `val`, that is in the range of `min` to `max`, and scales it to be within range of `new_min` to `new_max`.
+    Value of 0.5 that is in range 0->1, will turn to 5 when scaled to range 0->10.
+    Value of 50 that is in range 0->100, will turn to 5 when scaled to range 0->10.
+
+    :param val: The variable to scale.
+    :param min: Minimum allowed value of the variable.
+    :param max: Maximum allowed value of the variable.
+    :param new_min: Minimum value of the new range.
+    :param new_max: Maximum value of the new range.
+    :return: The scaled variable.
+    """
+    normalized = (val - min) / (max - min)
+    return (normalized * (new_max - new_min)) + new_min

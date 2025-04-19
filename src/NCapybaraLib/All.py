@@ -13,7 +13,7 @@ from ._internal.init import nullish_operator
 
 from .String import *
 
-from .Dictionary import *
+from .Containers import *
 
 from .Math import *
 

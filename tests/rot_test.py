@@ -20,18 +20,58 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""
-NCapybaraLib; By NorbCodes.
+from src.NCapybaraLib.ROT import *
 
-Submodule for dictionaries and stuff.
+def test_rot13_roundtrip():
+    text = "Hello, World!"
+    encrypted = Rot13(text)
+    decrypted = Rot13(encrypted)
+    assert decrypted == text
 
-https://pypi.org/project/NCapybaraLib/
-"""
+def test_full_rot13():
+    data = b"\x00\x7f\xffABCxyz"
+    encrypted = FullRot13(data)
+    encrypted2 = FullRotN(FullRotN(data, 7), 6)
+    assert encrypted == encrypted2
 
-from ._internal.Containers import map_inputs
-from ._internal.Containers import contains
-from ._internal.Containers import not_contains
-from ._internal.Containers import clean
+def test_rot_n_roundtrip():
+    text = "Hello, World!"
+    encrypted = RotN(text, 13)
+    decrypted = RotN(encrypted, 13)
+    assert decrypted == text
+
+def test_full_rot_n_roundtrip():
+    data = b"\x00\x7f\xffABCxyz"
+    encrypted = FullRotN(data, 100)
+    decrypted = FullRotN(encrypted, 156)  # 100 + 156 = 256 mod 256
+    assert decrypted == data
+
+def test_rot13_known_values():
+    assert Rot13("Hello") == "Uryyb"
+    assert Rot13("Uryyb") == "Hello"
+    assert Rot13(b"abcXYZ") == b"nopKLM"
+
+def test_rot_n_custom_rotation():
+    assert RotN("abc", 1) == "bcd"
+    assert RotN("xyz", 3) == "abc"
+    assert RotN(b"XYZ", 2) == b"ZAB"
+
+def test_full_rot_n_custom_rotation():
+    assert FullRotN(b"\x00\x01\x02", 1) == b"\x01\x02\x03"
+    assert FullRotN(b"\xff", 1) == b"\x00"
+    result = FullRotN("abc", 2)
+    assert isinstance(result, bytes)
+    assert result == b"cde"
+
+def test_non_alpha_characters_unchanged():
+    text = "1234!@#$"
+    assert Rot13(text) == text
+    assert RotN(text, 5) == text
+
+def test_str_and_bytes_equivalence():
+    text = "Python3!"
+    assert Rot13(text) == Rot13(text.encode()).decode()
+    assert RotN(text, 7) == RotN(text.encode(), 7).decode()
 
 # MIT License
 #

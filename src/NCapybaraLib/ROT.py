@@ -23,15 +23,15 @@
 """
 NCapybaraLib; By NorbCodes.
 
-Submodule for dictionaries and stuff.
+Submodule for ROT13 and ROT-N.
 
 https://pypi.org/project/NCapybaraLib/
 """
 
-from ._internal.Containers import map_inputs
-from ._internal.Containers import contains
-from ._internal.Containers import not_contains
-from ._internal.Containers import clean
+from ._internal.ROT import Rot13
+from ._internal.ROT import FullRot13
+from ._internal.ROT import RotN
+from ._internal.ROT import FullRotN
 
 # MIT License
 #

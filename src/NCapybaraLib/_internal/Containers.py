@@ -1,3 +1,25 @@
+# MIT License
+#
+# Copyright (c) 2024 NorbCodes (a.k.a norb3695 or Norb)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 """
 NCapybaraLib; By NorbCodes.
 
@@ -51,13 +73,13 @@ def map_inputs(_first: list[Any], _second: list[Any]) -> dict[Any, Any]:
 
 def contains(val: Any, check_in: Container[n] | list[Container[n]]) -> bool:
     """
-    Checks if `val` is present in all provided containers.
+    Checks if `val` is present in the containers.
 
     :param val: The value.
-    :param check_in: Container/Containers
+    :param check_in: Container/Containers.
     :return: Boolean.
     """
-    if isinstance(check_in, list):
+    if isinstance(check_in[0], Container):
         for container in check_in:
             if val not in container:
                 return False
@@ -70,10 +92,10 @@ def not_contains(val: Any, check_in: Container[n] | list[Container[n]]) -> bool:
     Checks if `val` is NOT present in all provided containers.
 
     :param val: The value.
-    :param check_in: Container/Containers
+    :param check_in: Container/Containers.
     :return: Boolean.
     """
-    if isinstance(check_in, list):
+    if isinstance(check_in[0], Container):
         for container in check_in:
             if val in container:
                 return False
@@ -114,3 +136,25 @@ def clean(array: list[n] | tuple[n, ...] | set[n] | dict[n, m]) -> list[n] | tup
                     new_dict[i] = array[i]
         return new_dict
     return None
+
+# MIT License
+#
+# Copyright (c) 2024 NorbCodes (a.k.a norb3695 or Norb)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.

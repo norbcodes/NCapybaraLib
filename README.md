@@ -26,11 +26,11 @@ To download this library, run this command:<pre><code>pip install NCapybaraLib</
 This library <b>does not need any dependencies</b>.<br>
 You can alternatively get the latest release <a href="https://github.com/norbcodes/NCapybaraLib/releases/latest">here</a>.<br>
 Or you can clone the <a href="https://github.com/norbcodes/NCapybaraLib/tree/main">main</a> branch and build the library yourself.<br>
-Main branch is the most up-to-date branch, so be careful when cloning dev branches.<br>
+Main branch is the most up-to-date branch.
 You can get the source code from the latest tag and built that, though.
 <a id="supported"></a>
 <h2>Supported versions</h2>
-<table><tr><th>Python 3.12</th><th>Python 3.11</th></tr></table>
+<table><tr><th>Python 3.11</th><th>Python 3.12</th><th>Python 3.13</th></tr></table>
 </p>
 <a id="usage"></a>
 <h1>Usage</h1>

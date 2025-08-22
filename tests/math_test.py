@@ -20,18 +20,44 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""
-NCapybaraLib; By NorbCodes.
+from src.NCapybaraLib.Math import *
 
-Submodule for dictionaries and stuff.
+def test_get_xy_in_2d_grid():
+    assert get_xy_in_2d_array(0, 8) == (0, 0)
+    assert get_xy_in_2d_array(8, 8) == (0, 1)
+    assert get_xy_in_2d_array(9, 8) == (1, 1)
 
-https://pypi.org/project/NCapybaraLib/
-"""
+def test_get_pos_in_2d_grid():
+    assert get_index_in_2d_array(0, 0, 8) == 0
+    assert get_index_in_2d_array(0, 1, 8) == 8
+    assert get_index_in_2d_array(0, 2, 8) == 16
+    assert get_index_in_2d_array(8, 1, 8) == 16
 
-from ._internal.Containers import map_inputs
-from ._internal.Containers import contains
-from ._internal.Containers import not_contains
-from ._internal.Containers import clean
+def test_tetra():
+    assert tetration(1, 1) == 1
+    assert tetration(1, 2) == 1
+    assert tetration(1, 3) == 1
+    assert tetration(2, 1) == 2
+    assert tetration(2, 2) == 4
+    assert tetration(2, 3) == 16
+    assert tetration(3, 1) == 3
+    assert tetration(3, 2) == 27
+    assert tetration(3, 3) == 7625597484987
+    assert tetration(4, 1) == 4
+    assert tetration(4, 2) == 256
+    assert tetration(4, 3) == 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
+
+def test_clamp():
+    assert clamp(5, 1, 6) == 5
+    assert clamp(0, 1, 6) == 1
+    assert clamp(8, 1, 6) == 6
+
+def test_range_scale():
+    assert range_scale(5, 1, 10, 10, 100) == 50
+    assert range_scale(0.5, 0, 1, 0, 10) == 5
+    assert range_scale(0.5, 0, 1, 1, 2) == 1.5
+    assert range_scale(1, 1, 2, 2, 4) == 2.0
+    assert range_scale(1, 0, 10, 0, 100) == 10
 
 # MIT License
 #

@@ -20,18 +20,41 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""
-NCapybaraLib; By NorbCodes.
+from src.NCapybaraLib import nullish_operator, inject_function
 
-Submodule for dictionaries and stuff.
+def test_nullish():
+    assert nullish_operator(None, "Hi") == "Hi"
+    assert nullish_operator("A", "B") == "A"
+    assert nullish_operator(None, None) is None
+    assert nullish_operator(None, lambda n: n * 5)(8) == 8*5
 
-https://pypi.org/project/NCapybaraLib/
-"""
+def test_injection():
+    class Hi:
+        v = 0
 
-from ._internal.Containers import map_inputs
-from ._internal.Containers import contains
-from ._internal.Containers import not_contains
-from ._internal.Containers import clean
+    MyClass = Hi()
+
+    assert MyClass.v == 0
+
+    def ret(self):
+        return self.v
+
+    inject_function(MyClass, "retV", ret)
+
+    assert MyClass.retV() == 0
+
+    MyClass.v += 5
+
+    assert MyClass.retV() == 5
+
+    def increment(self):
+        self.v += 1
+
+    inject_function(MyClass, "increment", increment)
+
+    MyClass.increment()
+
+    assert MyClass.retV() == 6
 
 # MIT License
 #

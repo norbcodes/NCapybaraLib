@@ -1,6 +1,10 @@
 .idea
 .venv
 .venv2
+.venv/*.*
+.venv2/*.*
+.venv3
+.venv3/*.*
 dist/*
 dist
 NCapybaraLib.egg-info
@@ -10,3 +14,4 @@ src/NCapybaraLib/_internal/__pycache__/
 
 secret.txt
 main.py
+*_i.txt
